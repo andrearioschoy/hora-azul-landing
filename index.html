@@ -1,187 +1,131 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Hora Azul Fotografía: guarda tus memorias con intención.">
-    <meta property="og:title" content="Hora Azul Fotografía">
-    <meta property="og:description" content="Un espacio íntimo para conectar, mirarte desde adentro y guardar lo que realmente importa.">
-    <meta property="og:image" content="assets/1.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Hora Azul Fotografía</title>
     <style>
-        :root {
-            --azul-oscuro: #3C3744;
-            --beige: #FFF1D0;
-            --azul-medio: #2854AC;
-            --azul-claro: #66B1EF;
-            --tipografia: 'Georgia', serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: var(--tipografia);
-            background-color: white;
-            color: var(--azul-oscuro);
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #ffffff;
+            color: #3C3744;
             line-height: 1.6;
         }
-
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            border-bottom: 1px solid #ddd;
+            text-align: center;
+            padding: 2rem 1rem;
         }
-
         header img {
-            height: 50px;
+            width: 120px;
+            margin-bottom: 1rem;
         }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--azul-medio);
+        h1 {
+            font-size: 2rem;
             font-weight: bold;
         }
-
-        section {
-            padding: 3rem 2rem;
-            max-width: 960px;
-            margin: auto;
+        .section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
         }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--azul-oscuro);
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        .cta {
-            background: var(--azul-medio);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .grid img {
+        .section img {
             width: 100%;
-            border-radius: 12px;
+            border-radius: 8px;
+            margin: 1rem 0;
         }
-
-        .testimonios, .beneficios, .faq {
-            background: var(--beige);
+        .cta-button {
+            display: inline-block;
+            background-color: #2854AC;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
             border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            font-weight: bold;
+            font-size: 1rem;
+            text-decoration: none;
+            margin-top: 1rem;
         }
-
-        footer {
-            padding: 2rem;
+        .benefits, .faq, .testimonials {
+            margin-top: 2rem;
+        }
+        .faq div {
+            margin: 1rem 0;
+        }
+        .footer-cta {
+            background-color: #c6d4dd;
             text-align: center;
-            font-size: 0.9rem;
-            color: #999;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        .testimonial, .benefit {
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="assets/logo.png" alt="Hora Azul Logo" />
-        <nav>
-            <ul>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#faq">Preguntas</a></li>
-            </ul>
-        </nav>
+        <img src="logo.png" alt="Hora Azul Logo">
+        <h1>Lo que amas hoy, mañana será memoria. Guárdalo.</h1>
+        <p>Un espacio íntimo para conectar, mirarte desde adentro y guardar lo que realmente importa.</p>
+        <a href="#cta" class="cta-button">Guardar mi Hora Azul</a>
     </header>
 
-    <section id="hook" class="grid">
-        <div>
-            <h1>Lo que amas hoy, mañana será memoria. Guárdalo.</h1>
-            <p>Un espacio íntimo para conectar, mirarte desde adentro y guardar lo que realmente importa.</p>
-            <a href="#faq"><button class="cta">Guardar mi Hora Azul</button></a>
-        </div>
-        <img src="assets/1.jpg" alt="Imagen destacada" />
-    </section>
+    <div class="section">
+        <img src="1.jpg" alt="Problema">
+        <h2>Vivimos tan rápido que a veces olvidamos guardar lo que más amamos.</h2>
+    </div>
 
-    <section id="problema" class="grid">
-        <img src="assets/2.jpg" alt="Imagen problema" />
-        <div>
-            <h2>Vivimos tan rápido...</h2>
-            <p>...que a veces olvidamos guardar lo que más amamos.</p>
-        </div>
-    </section>
+    <div class="section">
+        <img src="2.jpg" alt="Promesa">
+        <h2>Lo que hoy es momento, mañana será memoria: te ayudo a guardarla para siempre.</h2>
+    </div>
 
-    <section id="promesa" class="grid">
-        <div>
-            <h2>La promesa</h2>
-            <p>Lo que hoy es momento, mañana será memoria: te ayudo a guardarla para siempre.</p>
-        </div>
-        <img src="assets/3.jpg" alt="Imagen promesa" />
-    </section>
+    <div class="section">
+        <img src="3.jpg" alt="Proceso">
+        <h2>Hora Azul es un espacio íntimo donde conectarás de verdad mientras tu esencia se convierte en memoria tangible.</h2>
+    </div>
 
-    <section id="proceso" class="grid">
-        <img src="assets/4.jpg" alt="Imagen proceso" />
-        <div>
-            <h2>El proceso</h2>
-            <p>Hora Azul es un espacio íntimo donde conectarás de verdad mientras tu esencia se convierte en memoria tangible.</p>
-        </div>
-    </section>
-
-    <section id="testimonios" class="testimonios">
+    <div class="section testimonials">
         <h2>Testimonios</h2>
-        <ul>
-            <li><strong>Hora Azul de Natasha, pug de 16 años:</strong> “Me gusta saber que siempre vamos a poder verla así, feliz y tranquila tomando el sol”.</li>
-            <li><strong>Hora Azul de Ana y Luis:</strong> “Nos encantó que por un momento nos olvidamos de las fotos y solo estábamos siendo nosotros mismos y disfrutando”.</li>
-            <li><strong>Hora Azul de la familia Pacchiano:</strong> “Nos divertimos mucho, fue una experiencia muy linda y emotiva”.</li>
-        </ul>
-    </section>
+        <div class="testimonial">
+            <img src="4.jpg" alt="Testimonio 1">
+            <p><em>"Me gusta saber que siempre vamos a poder verla así, feliz y tranquila tomando el sol"</em><br/>– Hora Azul de Natasha, pug de 16 años</p>
+        </div>
+        <div class="testimonial">
+            <img src="5.jpg" alt="Testimonio 2">
+            <p><em>"Me encantó que por un momento nos olvidamos de las fotos y solo estábamos siendo nosotros mismos y disfrutando"</em><br/>– Ana y Luis</p>
+        </div>
+        <div class="testimonial">
+            <img src="6.jpg" alt="Testimonio 3">
+            <p><em>"Nos divertimos mucho, fue una experiencia muy linda y emotiva"</em><br/>– Familia Pacchiano</p>
+        </div>
+    </div>
 
-    <section id="beneficios" class="beneficios">
+    <div class="section benefits">
         <h2>Beneficios</h2>
-        <ul>
-            <li>Guardar el presente antes de que cambie</li>
-            <li>Conexión real con la gente que amas</li>
-            <li>Memorias que sí se sienten, no fotos incómodas</li>
-        </ul>
-    </section>
+        <div class="benefit">Guardar el presente antes de que cambie</div>
+        <div class="benefit">Conexión real con la gente que amas en un mundo donde el tiempo parece poco</div>
+        <div class="benefit">Memorias que sí se sienten, no fotos incómodas o selfies borrosas</div>
+    </div>
 
-    <section id="faq" class="faq">
-        <h2>Preguntas frecuentes</h2>
-        <ul>
-            <li><strong>¿Qué incluye el servicio?</strong> Fotografías digitales y 1 o más encuadradas, según la Hora Azul que vivas.</li>
-            <li><strong>¿Cuánto tardan en entregar?</strong> De 8 a 10 días hábiles.</li>
-            <li><strong>¿Puedo incluir a mis mascotas?</strong> ¡Claro que sí! La Hora Azul es para todos los vínculos importantes.</li>
-        </ul>
-    </section>
+    <div class="section faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div>
+            <strong>¿Qué incluye el servicio?</strong>
+            <p>Fotografías digitales y 1 o más fotografías encuadradas (dependiendo de la Hora Azul que vivan).</p>
+        </div>
+        <div>
+            <strong>¿Cuánto tardan en entregar?</strong>
+            <p>De 8 a 10 días hábiles.</p>
+        </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Hora Azul Fotografía. Todos los derechos reservados.</p>
-    </footer>
+    <div id="cta" class="footer-cta">
+        <img src="mini-logo.png" alt="Mini Logo" style="width:80px;">
+        <p>Haz tuyo este espacio de conexión. Reserva tu Hora Azul hoy.</p>
+        <a href="#" class="cta-button">Guardar mi Hora Azul</a>
+    </div>
 </body>
 </html>
