@@ -4,462 +4,155 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hora Azul Fotografía</title>
-
-  <!-- Tipografías similares al diseño de referencia -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
   <style>
-    :root {
-      --azul-oscuro: #3C3744;
-      --azul: #2854AC;
-      --azul-suave: #c7d4dd;
-      --gris-texto: #333333;
-      --blanco: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--gris-texto);
-      background-color: #f7f7f8;
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    h1, h2, h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--azul-oscuro);
-      margin: 0 0 1rem;
-    }
-
-    p {
-      margin: 0 0 1rem;
-    }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      background: var(--blanco);
-    }
-
-    .section {
-      padding: 3.5rem 3rem;
-    }
-
-    /* HEADER / BARRA SUPERIOR SOLO LOGO (sin nav) */
-    .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 1.5rem 3rem 1rem;
-      gap: 1rem;
-      background: var(--blanco);
-    }
-
-    .top-bar img {
-      height: 58px;
-    }
-
-    /* BOTÓN PRINCIPAL ESTILO REFERENCIA */
-    .cta {
-      display: inline-block;
-      padding: 0.9rem 2.2rem;
-      border-radius: 999px;
-      border: none;
-      background: var(--azul);
-      color: var(--blanco);
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .cta.secondary {
-      background: var(--blanco);
-      color: var(--azul);
-      border: 1px solid var(--azul);
-    }
-
-    .cta:hover {
-      filter: brightness(1.05);
-    }
-
-    /* HERO (HOOK + SUBTÍTULO + CTA + IMAGEN) */
-    .hero {
-      display: grid;
-      grid-template-columns: 2fr 1.1fr;
-      min-height: 420px;
-    }
-
-    .hero-image {
-      overflow: hidden;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-panel {
-      background: var(--azul-suave);
-      padding: 3rem 2.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .hero-panel-logo {
-      margin-bottom: 2.5rem;
-    }
-
-    .hero-panel-logo img {
-      height: 70px;
-    }
-
-    .hero-panel h1 {
-      font-size: 2.2rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-panel p {
-      margin-bottom: 2rem;
-      max-width: 18rem;
-    }
-
-    /* SECCIÓN PROBLEMA / PROMESA / PROCESO */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.1fr 1.1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .two-col.reverse {
-      grid-template-columns: 1.1fr 1.1fr;
-      direction: rtl;
-    }
-
-    .two-col.reverse > * {
-      direction: ltr;
-    }
-
-    .label {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.75rem;
-      color: var(--azul-oscuro);
-      margin-bottom: 0.7rem;
-    }
-
-    .text-block p {
-      max-width: 26rem;
-    }
-
-    .image-block img {
-      border-radius: 10px;
-      object-fit: cover;
-      width: 100%;
-    }
-
-    /* TESTIMONIOS */
-    .section-testimonios {
-      padding-top: 1rem;
-    }
-
-    .section-testimonios h2 {
-      text-align: center;
-      margin-bottom: 0.4rem;
-    }
-
-    .section-testimonios .subtitle {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      color: #555;
-    }
-
-    .testimonios-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 2rem;
-    }
-
-    .testimonial-card img {
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      height: 220px;
-      object-fit: cover;
-      width: 100%;
-    }
-
-    .testimonial-card p {
-      font-size: 0.95rem;
-    }
-
-    /* BENEFICIOS (TÍTULO + LISTA AL LADO) */
-    .beneficios-layout {
-      display: grid;
-      grid-template-columns: 1.2fr 1.1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .beneficios-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .beneficios-list li {
-      margin-bottom: 1rem;
-      padding-left: 1.4rem;
-      position: relative;
-    }
-
-    .beneficios-list li::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--azul);
-      position: absolute;
-      left: 0;
-      top: 0.55rem;
-    }
-
-    /* FAQ / PREGUNTAS */
-    .faq-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-    }
-
-    .faq-item {
-      border: 1px solid #dde1e6;
-      border-radius: 6px;
-      padding: 0.9rem 1.1rem;
-      text-align: left;
-      background: #f9fafb;
-    }
-
-    .faq-item strong {
-      display: block;
-      margin-bottom: 0.35rem;
-    }
-
-    /* HOOK FINAL */
-    .final-hero {
-      padding: 4rem 3rem 4.5rem;
-      background: var(--azul-suave);
-      text-align: center;
-    }
-
-    .final-hero-logo {
-      margin-bottom: 1.5rem;
-    }
-
-    .final-hero-logo img {
-      height: 70px;
-    }
-
-    .final-hero h2 {
-      margin-bottom: 0.8rem;
-    }
-
-    .final-hero p {
-      margin-bottom: 2rem;
-    }
-
-    @media (max-width: 900px) {
-      .page {
-        margin: 0;
-      }
-
-      .top-bar {
-        justify-content: center;
-        padding: 1.2rem 1.5rem 0.5rem;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-panel {
-        align-items: center;
-        text-align: center;
-      }
-
-      .hero-panel p {
-        max-width: none;
-      }
-
-      .section {
-        padding: 2.5rem 1.5rem;
-      }
-
-      .two-col,
-      .two-col.reverse,
-      .beneficios-layout,
-      .testimonios-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .testimonios-grid {
-        gap: 1.8rem;
-      }
-
-      .final-hero {
-        padding: 3rem 1.5rem 3.5rem;
-      }
-    }
+    body { margin:0; font-family:'Georgia', serif; background:#F7F7F8; color:#3C3744; }
+    section { width:100%; padding:4rem 0; }
+    .wide-img { width:100%; border-radius:20px; }
+    .center { text-align:center; }
+    .logo-top { width:120px; display:block; margin:2rem auto; }
+    h1,h2,h3 { font-weight:700; }
+    .cta { padding:1rem 2rem; border-radius:40px; background:white; border:2px solid #2854AC; color:#2854AC; font-weight:bold; text-decoration:none; }
+    .cta-blue { padding:1rem 2rem; border-radius:40px; background:white; border:2px solid #2854AC; color:#2854AC; font-weight:bold; text-decoration:none; }
+    .two-col { display:flex; gap:3rem; align-items:center; width:85%; margin:auto; }
+    .two-col img { width:50%; border-radius:20px; }
+    .two-col div { width:50%; }
+    .testi-grid { display:flex; gap:2rem; width:85%; margin:auto; }
+    .testi-grid img { width:100%; border-radius:20px; }
+    .packages { display:flex; justify-content:center; gap:2rem; width:90%; margin:auto; }
+    .package { background:#C7D3DD; padding:2rem; border-radius:30px; width:30%; text-align:center; }
+    iframe { width:100%; height:900px; border:none; }
   </style>
 </head>
 <body>
 
-  <div class="page">
-
-    <!-- BARRA SUPERIOR SOLO LOGO (sin navegación) -->
-    <div class="top-bar">
-      <img src="logo.png" alt="Logo Hora Azul Fotografía" />
+<!-- HERO -->
+<section style="background:white;">
+  <img src="logo.png" class="logo-top" />
+  <div class="two-col">
+    <img src="hero.jpg" class="wide-img" />
+    <div>
+      <h1>Lo que amas hoy, mañana será memoria. Conecta ahora.</h1>
+      <p>Un espacio íntimo para conectar, mirarte desde adentro y guardar lo que realmente importa.</p>
+      <a href="#elige" class="cta-blue">QUIERO MI HORA AZUL</a>
     </div>
-
-    <!-- HERO / HOOK -->
-    <section class="hero">
-      <div class="hero-image">
-        <!-- Hero: imagen grande familia -->
-        <img src="1.jpg" alt="Familia abrazándose en Hora Azul" />
-      </div>
-      <div class="hero-panel">
-        <div class="hero-panel-logo">
-          <img src="mini-logo.png" alt="Isotipo Hora Azul" />
-        </div>
-        <h1>Lo que amas hoy, mañana será memoria. Guárdalo.</h1>
-        <p>Un espacio íntimo para conectar, mirarte desde adentro y guardar lo que realmente importa.</p>
-        <a href="#cta-final" class="cta">Quiero mi Hora Azul</a>
-      </div>
-    </section>
-
-    <!-- PROBLEMA -->
-    <section class="section">
-      <div class="two-col">
-        <div class="image-block">
-          <img src="2.jpg" alt="Imagen que representa el problema" />
-        </div>
-        <div class="text-block">
-          <div class="label">Problema</div>
-          <h2>Vivimos tan rápido que a veces olvidamos guardar lo que más amamos.</h2>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROMESA -->
-    <section class="section">
-      <div class="two-col reverse">
-        <div class="image-block">
-          <img src="3.jpg" alt="Imagen promesa" />
-        </div>
-        <div class="text-block">
-          <div class="label">Promesa</div>
-          <h2>Lo que hoy es momento, mañana será memoria: te ayudo a guardarla para siempre.</h2>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESO -->
-    <section class="section">
-      <div class="two-col">
-        <div class="image-block">
-          <img src="4.jpg" alt="Imagen proceso" />
-        </div>
-        <div class="text-block">
-          <div class="label">Proceso</div>
-          <h2>Hora Azul es un espacio íntimo donde conectarás de verdad mientras tu esencia se convierte en memoria tangible.</h2>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIOS -->
-    <section class="section section-testimonios" id="testimonios">
-      <h2>Testimonios</h2>
-      <p class="subtitle">Lo que dicen quienes ya vivieron su Hora Azul.</p>
-
-      <div class="testimonios-grid">
-        <div class="testimonial-card">
-          <img src="5.jpg" alt="Hora Azul de Natasha, pug de 16 años" />
-          <p><strong>Hora Azul de Natasha, pug de 16 años</strong><br>
-          “Me gusta saber que siempre vamos a poder verla así, feliz y tranquila tomando el sol”.</p>
-        </div>
-        <div class="testimonial-card">
-          <img src="6.jpg" alt="Hora Azul de Ana y Luis" />
-          <p><strong>Hora Azul de Ana y Luis</strong><br>
-          “Me encantó que por un momento nos olvidamos de las fotos y solo estábamos siendo nosotros mismos y disfrutando”.</p>
-        </div>
-        <div class="testimonial-card">
-          <img src="7.jpg" alt="Hora Azul de la familia Pacchiano" />
-          <p><strong>Hora Azul de la familia Pacchiano</strong><br>
-          “Nos divertimos mucho, fue una experiencia muy linda y emotiva”.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- BENEFICIOS -->
-    <section class="section" id="beneficios">
-      <div class="beneficios-layout">
-        <div>
-          <h2>Beneficios</h2>
-          <p>Más que fotos bonitas: un espacio cuidado para detenerte, mirar y guardar lo que de verdad importa.</p>
-        </div>
-        <div>
-          <ul class="beneficios-list">
-            <li>Guardar el presente antes de que cambie.</li>
-            <li>Conexión real con la gente que amas en un mundo donde el tiempo parece poco.</li>
-            <li>Memorias que sí se sienten, no fotos incómodas o selfies borrosas.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PREGUNTAS FRECUENTES -->
-    <section class="section" id="faq">
-      <h2>Preguntas frecuentes</h2>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <strong>¿Qué incluye el servicio?</strong>
-          <span>Fotografías digitales y 1 o más fotografías encuadradas (dependiendo de la Hora Azul que vivan).</span>
-        </div>
-        <div class="faq-item">
-          <strong>¿Cuánto tardan en entregar?</strong>
-          <span>De 8 a 10 días hábiles.</span>
-        </div>
-        <div class="faq-item">
-          <strong>¿Dónde se realiza la Hora Azul?</strong>
-          <span>En un lugar cómodo para ti: tu casa, un parque o un espacio que sea importante en tu historia.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOOK FINAL / CTA FINAL -->
-    <section class="final-hero" id="cta-final">
-      <div class="final-hero-logo">
-        <img src="mini-logo.png" alt="Logo Hora Azul" />
-      </div>
-      <h2>Haz tuyo este espacio de conexión. Reserva tu Hora Azul hoy.</h2>
-      <p>La cámara es la excusa. La memoria es la huella.</p>
-      <a class="cta secondary" href="mailto:hola@horaazul.com?subject=Quiero%20mi%20Hora%20Azul">Quiero mi Hora Azul</a>
-    </section>
-
   </div>
+</section>
+
+<!-- PROBLEMA -->
+<section style="background:white;">
+  <div class="two-col">
+    <img src="problema.jpg" />
+    <div>
+      <h2>Vivimos tan rápido que a veces olvidamos guardar lo que más amamos.</h2>
+    </div>
+  </div>
+</section>
+
+<!-- PROMESA -->
+<section style="background:white;">
+  <div class="two-col">
+    <div>
+      <h2>Lo que hoy es momento, mañana será memoria: te ayudo a guardarla para siempre.</h2>
+    </div>
+    <img src="promesa.jpg" />
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section style="background:white;">
+  <div class="two-col">
+    <img src="proceso-horizontal.jpg" />
+    <div>
+      <h2>Hora Azul es un espacio íntimo donde dejarás las preocupaciones en la puerta y conectarás con tu verdad mientras tu esencia se convierte en memoria tangible.</h2>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="center" style="background:white;">
+  <h2>Testimonios</h2>
+  <p>Lo que sienten quienes ya vivieron su Hora Azul.</p>
+  <div class="testi-grid">
+    <div>
+      <img src="testi1.jpg" />
+      <h3>La Hora Azul de Natasha, pug de 16 años</h3>
+      <p>“Me gusta saber que siempre vamos a poder verla así, feliz y tranquila tomando el sol”.</p>
+    </div>
+    <div>
+      <img src="testi2.jpg" />
+      <h3>La Hora Azul de Ana y Luis</h3>
+      <p>“Me encantó que por un momento nos olvidamos de las fotos y solo estábamos siendo nosotros mismos y disfrutando”.</p>
+    </div>
+    <div>
+      <img src="testi3-fixed.jpg" />
+      <h3>La Hora Azul de la familia Paz</h3>
+      <p>“Nos divertimos mucho, fue una experiencia muy linda y emotiva”.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section style="background:white;">
+  <div class="two-col" style="align-items:flex-start;">
+    <div>
+      <h2>Beneficios</h2>
+    </div>
+    <div>
+      <ul>
+        <li>Guardar el presente antes de que cambie.</li>
+        <li>Conexión real con la gente que amas en un mundo donde el tiempo parece poco.</li>
+        <li>Memorias que sí se sienten, no fotos incómodas o selfies borrosas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- NUEVA SECCIÓN: ELIGE TU HORA AZUL -->
+<section id="elige" class="center" style="background:#F0F4F7;">
+  <h2>Elige tu Hora Azul</h2>
+  <p>Hora Azul es tu espacio, vívelo a tu manera.</p>
+  <div class="packages">
+    <div class="package">
+      <h3>Instante</h3>
+      <p><em>Un retrato para detener el tiempo un momento. Una pausa ligera e íntima que te recuerda que existes más allá del ruido.</em></p>
+      <p>Sesión de 1 hora + 15 fotos + 1 Impresión encuadrada de 32x32cm</p>
+      <strong>$4,700</strong>
+    </div>
+    <div class="package">
+      <h3>Conexión</h3>
+      <p><em>Aquí lo efímero se convierte en algo que puedes honrar, colgar, sentir y compartir. Tu casa de transforma en un hogar con su esencia en la paredes.</em></p>
+      <p>Sesión de 1.5 horas + 30 fotos + Set de 4 impresiones encuadradas de 20x20cm</p>
+      <strong>$7,300</strong>
+    </div>
+    <div class="package">
+      <h3>Huella</h3>
+      <p><em>La memoria que deja marca. Un legado que trasciende generaciones, se guarda, se abraza y se hereda.</em></p>
+      <p>Sesión de 2 horas + 60 fotos + Álbum artesanal con todos los momentos de su Hora Azul de 28x22cm</p>
+      <strong>$12,000</strong>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES -->
+<section style="background:white; width:85%; margin:auto;">
+  <h2>Preguntas frecuentes</h2>
+  <p><strong>¿Qué incluye el servicio?</strong><br>Fotografías digitales y 1 o más fotografías encuadradas, según el tipo de Hora Azul.</p>
+  <p><strong>¿Cuánto tardan en entregar?</strong><br>De 8 a 10 días hábiles.</p>
+  <p><strong>¿Dónde se realiza la Hora Azul?</strong><br>En el espacio de tu elección o en el estudio de Hora Azul.</p>
+</section>
+
+<!-- FINAL CTA -->
+<section style="background:#C7D3DD; text-align:center; padding:6rem 2rem;">
+  <img src="logo-full.png" style="width:150px; margin:auto; display:block;" />
+  <h2>Haz tuyo este momento de conexión. Guarda tu Hora Azul hoy.</h2>
+  <p>La cámara es la excusa. La memoria es la huella.</p>
+  <a href="#agenda" class="cta">QUIERO MI HORA AZUL</a>
+</section>
+
+<!-- AGENDA (CAL.COM) -->
+<section id="agenda" style="background:white;">
+  <iframe src="https://cal.com/hora-azul-fotografia/15min"></iframe>
+</section>
+
 </body>
 </html>
