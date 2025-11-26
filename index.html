@@ -6,112 +6,78 @@
   <title>Hora Azul Fotografía</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background: #F7F7F8;
-      color: #3C3744;
+    body { margin:0; font-family:'Georgia', serif; background:#F7F7F8; color:#3C3744; }
+    section { width:100%; padding:4rem 0; }
+
+    .wide-img { width:100%; border-radius:20px; }
+    .center { text-align:center; }
+    .logo-top { width:150px; display:block; margin:2rem auto; }
+
+    h1,h2,h3 { font-weight:700; }
+    p { line-height:1.7; }
+
+    .cta {
+      padding:1rem 2.2rem;
+      border-radius:40px;
+      font-weight:bold;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:2rem;
+      border:2px solid #2854AC;
+      background:white;
+      color:#2854AC;
     }
 
-    section {
-      width: 100%;
-      padding: 4rem 0;
-    }
-
-    h1, h2, h3 { font-weight: 700; }
-    p { line-height: 1.7; }
-
-    .center { text-align: center; }
-    .logo-top { width: 150px; display: block; margin: 2rem auto; }
-
-    .wide-img { width: 100%; border-radius: 20px; }
-
-    /* BOTONES */
-    .cta, .cta-blue {
-      padding: 1rem 2.2rem;
-      border-radius: 40px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 2rem;
-      border: 2px solid #2854AC;
-      background: white;
-      color: #2854AC;
-    }
-
-    /* LAYOUT */
     .two-col {
-      display: flex;
-      gap: 3rem;
-      align-items: center;
-      width: 85%;
-      margin: auto;
+      display:flex;
+      gap:3rem;
+      align-items:center;
+      width:85%;
+      margin:auto;
     }
-    .two-col img { width: 50%; border-radius: 20px; }
-    .two-col div { width: 50%; }
+    .two-col img { width:50%; border-radius:20px; }
+    .two-col div { width:50%; }
 
-    /* TESTIMONIOS */
-    .testi-grid {
-      display: flex;
-      gap: 2rem;
-      width: 85%;
-      margin: auto;
-    }
-    .testi-grid img {
-      width: 100%;
-      border-radius: 20px;
+    /* Testimonios imágenes iguales */
+    .testi-grid { display:flex; gap:2rem; width:85%; margin:auto; }
+    .testi-img {
+      width:100%;
+      height:350px;
+      object-fit:cover;
+      border-radius:20px;
     }
 
-    /* BENEFICIOS Y FAQ CON VIÑETAS AZULES */
-    ul {
-      list-style: none;
-      padding-left: 0;
+    .packages { display:flex; justify-content:center; gap:2rem; width:90%; margin:auto; }
+    .package { background:#C7D3DD; padding:2rem; border-radius:30px; width:30%; text-align:center; }
+
+    /* Viñetas azules */
+    ul, .faq-list { list-style:none; padding-left:0; }
+    ul li, .faq-item {
+      position:relative;
+      margin-bottom:1.2rem;
+      padding-left:1.5rem;
     }
-    ul li {
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-    ul li::before {
-      content: '●';
-      color: #2854AC;
-      position: absolute;
-      left: 0;
-      top: 0;
+    ul li::before, .faq-item::before {
+      content:"•";
+      color:#2854AC;
+      font-size:1.6rem;
+      position:absolute;
+      left:0;
+      top:-0.2rem;
     }
 
-    /* PAQUETES */
-    .packages {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      width: 90%;
-      margin: auto;
-    }
-    .package {
-      background: #C7D3DD;
-      padding: 2rem;
-      border-radius: 30px;
-      width: 30%;
-      text-align: center;
-    }
-
-    iframe {
-      width: 100%;
-      height: 900px;
-      border: none;
-    }
-
+    iframe { width:100%; height:900px; border:none; }
   </style>
 </head>
-
 <body>
 
-<!-- HERO -->
+<!-- HERO (imagen izquierda, texto derecha) -->
 <section style="background:white;">
   <img src="logo.png" class="logo-top" />
-  <div class="two-col">
+
+  <div class="two-col" style="flex-direction:row;">
     <img src="1.jpg" class="wide-img" />
+
     <div>
       <h1>Lo que amas hoy, mañana será memoria. Conecta ahora.</h1>
       <p>Un espacio íntimo para conectar, mirarte desde adentro y guardar lo que realmente importa.</p>
@@ -156,33 +122,33 @@
   <p>Lo que sienten quienes ya vivieron su Hora Azul.</p>
 
   <div class="testi-grid">
+
     <div>
-      <img src="5.jpg" />
+      <img src="5.jpg" class="testi-img" />
       <h3>La Hora Azul de Natasha</h3>
       <p>“Me gusta saber que siempre vamos a poder verla así, feliz y tranquila tomando el sol”.</p>
     </div>
 
     <div>
-      <img src="6.jpg" />
+      <img src="6.jpg" class="testi-img" />
       <h3>La Hora Azul de Ana y Luis</h3>
-      <p>“Por un momento nos olvidamos de las fotos y solo estábamos siendo nosotros mismos.”</p>
+      <p>“Me encantó que por un momento nos olvidamos de las fotos y solo estábamos siendo nosotros mismos y disfrutando”.</p>
     </div>
 
     <div>
-      <img src="7.jpg" />
+      <img src="7.jpg" class="testi-img" />
       <h3>La Hora Azul de la familia Pacchiano</h3>
       <p>“Fue una experiencia muy linda y emotiva”.</p>
     </div>
+
   </div>
 </section>
 
 <!-- BENEFICIOS -->
 <section style="background:white;">
   <div class="two-col" style="align-items:flex-start;">
-    <div>
-      <h2>Beneficios</h2>
-      <p>Más que fotos bonitas: un espacio cuidado para detenerte, mirar y guardar lo que de verdad importa.</p>
-    </div>
+
+    <div><h2>Beneficios</h2></div>
 
     <div>
       <ul>
@@ -191,6 +157,7 @@
         <li>Memorias que sí se sienten, no fotos incómodas o selfies borrosas.</li>
       </ul>
     </div>
+
   </div>
 </section>
 
@@ -200,45 +167,49 @@
   <p>Hora Azul es tu espacio, vívelo a tu manera.</p>
 
   <div class="packages">
+
     <div class="package">
       <h3>Instante</h3>
-      <p><em>Un retrato para detener el tiempo un momento.</em></p>
-      <p>Sesión de 1 hora + 15 fotos + 1 Impresión 32x32cm</p>
+      <p><em>Un retrato para detener el tiempo un momento. Una pausa ligera e íntima que te recuerda que existes más allá del ruido.</em></p>
+      <p>Sesión de 1 hora + 15 fotos + 1 Impresión encuadrada de 32x32cm</p>
       <strong>$4,700</strong>
     </div>
 
     <div class="package">
       <h3>Conexión</h3>
-      <p><em>Algo que puedes honrar, colgar, sentir y compartir.</em></p>
-      <p>Sesión de 1.5 horas + 30 fotos + 4 impresiones 20x20cm</p>
+      <p><em>Aquí lo efímero se convierte en algo que puedes honrar, colgar, sentir y compartir.</em></p>
+      <p>Sesión de 1.5 horas + 30 fotos + Set de 4 impresiones encuadradas de 20x20cm</p>
       <strong>$7,300</strong>
     </div>
 
     <div class="package">
       <h3>Huella</h3>
-      <p><em>Un legado que trasciende generaciones.</em></p>
+      <p><em>La memoria que deja marca. Un legado que trasciende generaciones, se guarda, se abraza y se hereda.</em></p>
       <p>Sesión de 2 horas + 60 fotos + Álbum artesanal 28x22cm</p>
       <strong>$12,000</strong>
     </div>
+
   </div>
 
   <a href="#agenda" class="cta">GUARDA TU HORA AZUL</a>
 </section>
 
-<!-- FAQ -->
+<!-- PREGUNTAS FRECUENTES (sin bordes, con viñetas) -->
 <section style="background:white; width:85%; margin:auto;">
   <h2>Preguntas frecuentes</h2>
 
-  <ul>
-    <li><strong>¿Qué incluye el servicio?</strong><br>
-    Fotografías digitales y 1 o más fotografías encuadradas, según el tipo de Hora Azul.</li>
+  <div class="faq-list">
 
-    <li><strong>¿Cuánto tardan en entregar?</strong><br>
-    De 8 a 10 días hábiles.</li>
+    <p class="faq-item"><strong>¿Qué incluye el servicio?</strong><br>
+      Fotografías digitales y 1 o más fotografías encuadradas, según el tipo de Hora Azul.</p>
 
-    <li><strong>¿Dónde se realiza la Hora Azul?</strong><br>
-    En un espacio que sea importante para ti o en el estudio de Hora Azul.</li>
-  </ul>
+    <p class="faq-item"><strong>¿Cuánto tardan en entregar?</strong><br>
+      De 8 a 10 días hábiles.</p>
+
+    <p class="faq-item"><strong>¿Dónde se realiza la Hora Azul?</strong><br>
+      En un espacio que sea importante para ti o en el estudio de Hora Azul.</p>
+
+  </div>
 </section>
 
 <!-- CTA FINAL -->
