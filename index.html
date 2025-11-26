@@ -6,210 +6,176 @@
   <title>Hora Azul Fotografía</title>
 
   <style>
+
+    /* ------------------------------ */
+    /* FIX PARA LA FRANJA GRIS (OVERFLOW) */
+    /* ------------------------------ */
+    html, body {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #F7F7F8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
     /* ------------------------------ */
     /* ESTILOS GLOBALES */
     /* ------------------------------ */
 
     body {
-      margin: 0;
       font-family: 'Georgia', serif;
-      background: #F7F7F8;
       color: #3C3744;
     }
 
     section {
       width: 100%;
       padding: 4rem 0;
+      overflow-x: hidden;
     }
 
-    .center { text-align: center; }
+    .center { text-align:center; }
 
     .logo-top {
-      width: 150px;
-      display: block;
-      margin: 2rem auto;
+      width:150px;
+      display:block;
+      margin:2rem auto;
     }
 
-    h1, h2, h3 { font-weight: 700; }
-    p { line-height: 1.7; }
+    h1,h2,h3 { font-weight:700; }
+
+    p { line-height:1.7; }
 
     .cta {
-      padding: 1rem 2.2rem;
-      border-radius: 40px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 2rem;
-      border: 2px solid #2854AC;
-      background: white;
-      color: #2854AC;
-      transition: 0.2s ease;
+      padding:1rem 2.2rem;
+      border-radius:40px;
+      background:white;
+      color:#2854AC;
+      font-weight:bold;
+      text-decoration:none;
+      border:2px solid #2854AC;
+      display:inline-block;
+      margin-top:2rem;
     }
 
-    /* HERO */
     .two-col {
-      display: flex;
-      gap: 3rem;
-      align-items: center;
-      width: 85%;
-      margin: auto;
+      display:flex;
+      gap:3rem;
+      align-items:center;
+      width:85%;
+      margin:auto;
     }
 
     .two-col img {
-      width: 50%;
-      border-radius: 20px;
+      width:50%;
+      border-radius:20px;
     }
 
-    .two-col div { width: 50%; }
+    .two-col div { width:50%; }
 
     /* Testimonios */
     .testi-grid {
-      display: flex;
-      gap: 2rem;
-      width: 85%;
-      margin: auto;
-      justify-content: center;
+      display:flex;
+      gap:2rem;
+      width:85%;
+      margin:auto;
     }
 
     .testi-img {
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
+      width:100%;
+      height:auto;
+      border-radius:20px;
     }
 
     /* Packages */
     .packages {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      width: 90%;
-      margin: auto;
-      flex-wrap: wrap;
+      display:flex;
+      justify-content:center;
+      gap:2rem;
+      width:90%;
+      margin:auto;
+      flex-wrap:wrap;
     }
 
     .package {
-      background: #C7D3DD;
-      padding: 2rem;
-      border-radius: 30px;
-      width: 30%;
-      min-width: 280px;
-      text-align: center;
+      background:#C7D3DD;
+      padding:2rem;
+      border-radius:30px;
+      width:30%;
+      min-width:280px;
+      text-align:center;
     }
 
-    /* Viñetas azules */
-    ul, .faq-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
+    /* Viñetas */
+    ul, .faq-list { list-style:none; padding-left:0; }
     ul li, .faq-item {
-      position: relative;
-      margin-bottom: 1.2rem;
-      padding-left: 1.5rem;
+      position:relative;
+      padding-left:1.5rem;
+      margin-bottom:1.2rem;
     }
-
     ul li::before, .faq-item::before {
-      content: "•";
-      color: #2854AC;
-      font-size: 1.6rem;
-      position: absolute;
-      left: 0;
-      top: -0.2rem;
+      content:"•";
+      color:#2854AC;
+      position:absolute;
+      left:0;
+      top:-0.1rem;
+      font-size:1.4rem;
     }
 
-    iframe {
-      width: 100%;
-      height: 900px;
-      border: none;
-    }
+    iframe { width:100%; height:900px; border:none; }
 
     /* ------------------------------ */
-    /* RESPONSIVE FIXES */
+    /* RESPONSIVE */
     /* ------------------------------ */
 
-    @media (max-width: 1024px) {
-      .two-col,
-      .testi-grid {
-        width: 90%;
-      }
-    }
+    @media (max-width:820px) {
 
-    @media (max-width: 820px) {
-
-      /* HERO → TEXTO ARRIBA, FOTO ABAJO */
       .two-col {
-        flex-direction: column !important;
-        text-align: center;
-        width: 100%;
-        padding: 0 2rem;
+        flex-direction:column;
+        width:100%;
+        text-align:center;
+        padding:0 1.5rem;
       }
 
       .two-col img,
       .two-col div {
-        width: 100%;
+        width:100%;
       }
 
-      /* TESTIMONIOS */
       .testi-grid {
-        flex-direction: column;
-        width: 100%;
-        padding: 0 1.5rem;
+        flex-direction:column;
+        width:100%;
+        padding:0 1.5rem;
       }
 
-      .testi-img {
-        width: 100%;
-        height: auto;
-      }
-
-      /* PACKAGES */
       .packages {
-        width: 100%;
-        padding: 0 1.5rem;
+        width:100%;
+        padding:0 1.5rem;
       }
 
       .package {
-        width: 100%;
-        min-width: unset;
+        width:100%;
       }
 
-      /* PREGUNTAS FRECUENTES sin bordes */
+      /* FAQ full width móvil */
+      #faq, 
       section[style*="width:85%"] {
-        width: 100% !important;
-        margin: 0 !important;
-        padding-left: 2rem !important;
-        padding-right: 2rem !important;
+        width:100% !important;
+        margin:0 !important;
+        padding-left:1.5rem !important;
+        padding-right:1.5rem !important;
       }
     }
 
-    @media (max-width: 600px) {
-      h1 { font-size: 1.7rem; }
-      h2 { font-size: 1.5rem; }
-      p { font-size: 1rem; }
-
-      section { padding: 3rem 0; }
-
-      /* FAQ MOBILE FULL WIDTH */
-      #faq, section[style*="width:85%"] {
-        width: 100% !important;
-        margin: 0 !important;
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      body { font-size: 15px; }
-      .logo-top { width: 120px; }
-
-      .cta {
-        padding: 0.9rem 1.8rem;
-        font-size: 0.9rem;
-      }
-
-      h1 { font-size: 1.5rem; }
-      h2 { font-size: 1.3rem; }
-    }
   </style>
 </head>
 
@@ -218,12 +184,14 @@
 <!-- HERO -->
 <section style="background:white;">
   <img src="logo.png" class="logo-top" />
+
   <div class="two-col">
     <div>
       <h1>Lo que amas hoy, mañana será memoria. Conecta ahora.</h1>
       <p>Un espacio íntimo para conectar, mirarte desde adentro y guardar lo que realmente importa.</p>
       <a href="#elige" class="cta">QUIERO MI HORA AZUL</a>
     </div>
+
     <img src="1.jpg" />
   </div>
 </section>
@@ -273,12 +241,12 @@
     <div>
       <img src="6.jpg" class="testi-img" />
       <h3>La Hora Azul de Ana y Luis</h3>
-      <p>“Por un momento nos olvidamos de las fotos y solo estábamos siendo nosotros mismos”.</p>
+      <p>“Por un momento nos olvidamos de las fotos y solo estábamos siendo nosotros mismos y disfrutando”.</p>
     </div>
 
     <div>
       <img src="7.jpg" class="testi-img" />
-      <h3>La Hora Azul de la familia Pacchiano</h3>
+      <h3>La Hora Azul de la familia Paz</h3>
       <p>“Fue una experiencia muy linda y emotiva”.</p>
     </div>
   </div>
@@ -291,8 +259,8 @@
     <div>
       <ul>
         <li>Guardar el presente antes de que cambie.</li>
-        <li>Conexión real con la gente que amas.</li>
-        <li>Memorias que sí se sienten.</li>
+        <li>Conexión real con la gente que amas en un mundo donde el tiempo parece poco.</li>
+        <li>Memorias que sí se sienten, no fotos incómodas o selfies borrosas.</li>
       </ul>
     </div>
   </div>
@@ -304,46 +272,45 @@
   <p>Hora Azul es tu espacio, vívelo a tu manera.</p>
 
   <div class="packages">
+
     <div class="package">
       <h3>Instante</h3>
-      <p><em>Un retrato para detener el tiempo.</em></p>
-      <p>Sesión de 1 hora + 15 fotos + 1 impresión 32x32cm</p>
+      <p><em>Un retrato para detener el tiempo un momento. Una pausa ligera e íntima que te recuerda que existes más allá del ruido.</em></p>
+      <p>Sesión de 1 hora + 15 fotos + 1 Impresión encuadrada de 32x32cm</p>
       <strong>$4,700</strong>
     </div>
 
     <div class="package">
       <h3>Conexión</h3>
-      <p><em>Momentos para honrar y sentir.</em></p>
-      <p>Sesión de 1.5 horas + 30 fotos + set de impresiones 20x20cm</p>
+      <p><em>Aquí lo efímero se convierte en algo que puedes honrar, colgar, sentir y compartir. Tu casa se transforma en un hogar con su esencia en las paredes.</em></p>
+      <p>Sesión de 1.5 horas + 30 fotos + Set de 4 impresiones encuadradas de 20x20cm</p>
       <strong>$7,300</strong>
     </div>
 
     <div class="package">
       <h3>Huella</h3>
-      <p><em>Un legado que se guarda y se hereda.</em></p>
-      <p>Sesión de 2 horas + 60 fotos + álbum artesanal 28x22cm</p>
+      <p><em>La memoria que deja marca. Un legado que trasciende generaciones, se guarda, se abraza y se hereda.</em></p>
+      <p>Sesión de 2 horas + 60 fotos + Álbum artesanal 28x22cm</p>
       <strong>$12,000</strong>
     </div>
+
   </div>
 
   <a href="#agenda" class="cta">GUARDA TU HORA AZUL</a>
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="background:white; padding-left:4rem; padding-right:4rem;">
+<section id="faq" style="background:white;">
   <h2>Preguntas frecuentes</h2>
 
   <p class="faq-item"><strong>¿Qué incluye el servicio?</strong><br>
-    Fotografías digitales y fotografías encuadradas según tu Hora Azul.
-  </p>
+  Fotografías digitales y 1 o más fotografías encuadradas, según el tipo de Hora Azul.</p>
 
   <p class="faq-item"><strong>¿Cuánto tardan en entregar?</strong><br>
-    De 8 a 10 días hábiles.
-  </p>
+  De 8 a 10 días hábiles.</p>
 
   <p class="faq-item"><strong>¿Dónde se realiza la Hora Azul?</strong><br>
-    En un espacio especial para ti o en el estudio de Hora Azul.
-  </p>
+  En un espacio que sea importante para ti o en el estudio de Hora Azul.</p>
 </section>
 
 <!-- CTA FINAL -->
