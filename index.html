@@ -9,7 +9,6 @@
     body { margin:0; font-family:'Georgia', serif; background:#F7F7F8; color:#3C3744; }
     section { width:100%; padding:4rem 0; }
 
-    .wide-img { width:100%; border-radius:20px; }
     .center { text-align:center; }
     .logo-top { width:150px; display:block; margin:2rem auto; }
 
@@ -28,6 +27,7 @@
       color:#2854AC;
     }
 
+    /* Hero layout */
     .two-col {
       display:flex;
       gap:3rem;
@@ -38,12 +38,17 @@
     .two-col img { width:50%; border-radius:20px; }
     .two-col div { width:50%; }
 
-    /* Testimonios imágenes iguales */
-    .testi-grid { display:flex; gap:2rem; width:85%; margin:auto; }
+    /* Testimonios - horizontales iguales sin recortar */
+    .testi-grid { 
+      display:flex; 
+      gap:2rem; 
+      width:85%; 
+      margin:auto; 
+      justify-content:center;
+    }
     .testi-img {
       width:100%;
-      height:350px;
-      object-fit:cover;
+      height:auto;     /* No recorta */
       border-radius:20px;
     }
 
@@ -51,7 +56,7 @@
     .package { background:#C7D3DD; padding:2rem; border-radius:30px; width:30%; text-align:center; }
 
     /* Viñetas azules */
-    ul, .faq-list { list-style:none; padding-left:0; }
+    ul, .faq-list { list-style:none; padding-left:0; margin:0; }
     ul li, .faq-item {
       position:relative;
       margin-bottom:1.2rem;
@@ -71,12 +76,12 @@
 </head>
 <body>
 
-<!-- HERO (imagen izquierda, texto derecha) -->
+<!-- HERO (texto izquierda – imagen derecha) -->
 <section style="background:white;">
   <img src="logo.png" class="logo-top" />
 
-  <div class="two-col" style="flex-direction:row;">
-    <img src="1.jpg" class="wide-img" />
+  <div class="two-col" style="flex-direction:row-reverse;">
+    <img src="1.jpg" />
 
     <div>
       <h1>Lo que amas hoy, mañana será memoria. Conecta ahora.</h1>
@@ -137,7 +142,7 @@
 
     <div>
       <img src="7.jpg" class="testi-img" />
-      <h3>La Hora Azul de la familia Pacchiano</h3>
+      <h3>La Hora Azul de la familia Paz</h3>
       <p>“Fue una experiencia muy linda y emotiva”.</p>
     </div>
 
@@ -147,7 +152,6 @@
 <!-- BENEFICIOS -->
 <section style="background:white;">
   <div class="two-col" style="align-items:flex-start;">
-
     <div><h2>Beneficios</h2></div>
 
     <div>
@@ -157,7 +161,6 @@
         <li>Memorias que sí se sienten, no fotos incómodas o selfies borrosas.</li>
       </ul>
     </div>
-
   </div>
 </section>
 
@@ -167,7 +170,6 @@
   <p>Hora Azul es tu espacio, vívelo a tu manera.</p>
 
   <div class="packages">
-
     <div class="package">
       <h3>Instante</h3>
       <p><em>Un retrato para detener el tiempo un momento. Una pausa ligera e íntima que te recuerda que existes más allá del ruido.</em></p>
@@ -188,26 +190,31 @@
       <p>Sesión de 2 horas + 60 fotos + Álbum artesanal 28x22cm</p>
       <strong>$12,000</strong>
     </div>
-
   </div>
 
   <a href="#agenda" class="cta">GUARDA TU HORA AZUL</a>
 </section>
 
-<!-- PREGUNTAS FRECUENTES (sin bordes, con viñetas) -->
-<section style="background:white; width:85%; margin:auto;">
+<!-- PREGUNTAS FRECUENTES SIN BORDES GRISES -->
+<section style="background:white; width:85%; margin:auto; padding:4rem 0;">
   <h2>Preguntas frecuentes</h2>
 
   <div class="faq-list">
 
-    <p class="faq-item"><strong>¿Qué incluye el servicio?</strong><br>
-      Fotografías digitales y 1 o más fotografías encuadradas, según el tipo de Hora Azul.</p>
+    <p class="faq-item">
+      <strong>¿Qué incluye el servicio?</strong><br>
+      Fotografías digitales y 1 o más fotografías encuadradas, según el tipo de Hora Azul.
+    </p>
 
-    <p class="faq-item"><strong>¿Cuánto tardan en entregar?</strong><br>
-      De 8 a 10 días hábiles.</p>
+    <p class="faq-item">
+      <strong>¿Cuánto tardan en entregar?</strong><br>
+      De 8 a 10 días hábiles.
+    </p>
 
-    <p class="faq-item"><strong>¿Dónde se realiza la Hora Azul?</strong><br>
-      En un espacio que sea importante para ti o en el estudio de Hora Azul.</p>
+    <p class="faq-item">
+      <strong>¿Dónde se realiza la Hora Azul?</strong><br>
+      En un espacio que sea importante para ti o en el estudio de Hora Azul.
+    </p>
 
   </div>
 </section>
