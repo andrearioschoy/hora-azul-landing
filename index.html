@@ -25,9 +25,10 @@
       border:2px solid #2854AC;
       background:white;
       color:#2854AC;
+      transition:0.2s ease;
     }
 
-    /* Hero layout */
+    /* HERO layout */
     .two-col {
       display:flex;
       gap:3rem;
@@ -38,7 +39,7 @@
     .two-col img { width:50%; border-radius:20px; }
     .two-col div { width:50%; }
 
-    /* Testimonios - horizontales iguales sin recortar */
+    /* Testimonios */
     .testi-grid { 
       display:flex; 
       gap:2rem; 
@@ -48,15 +49,33 @@
     }
     .testi-img {
       width:100%;
-      height:auto;     /* No recorta */
+      height:auto; 
       border-radius:20px;
     }
 
-    .packages { display:flex; justify-content:center; gap:2rem; width:90%; margin:auto; }
-    .package { background:#C7D3DD; padding:2rem; border-radius:30px; width:30%; text-align:center; }
+    .packages { 
+      display:flex; 
+      justify-content:center; 
+      gap:2rem; 
+      width:90%; 
+      margin:auto; 
+      flex-wrap:wrap;
+    }
+    .package { 
+      background:#C7D3DD; 
+      padding:2rem; 
+      border-radius:30px; 
+      width:30%; 
+      min-width:280px;
+      text-align:center; 
+    }
 
     /* Viñetas azules */
-    ul, .faq-list { list-style:none; padding-left:0; margin:0; }
+    ul, .faq-list { 
+      list-style:none; 
+      padding-left:0; 
+      margin:0; 
+    }
     ul li, .faq-item {
       position:relative;
       margin-bottom:1.2rem;
@@ -72,11 +91,59 @@
     }
 
     iframe { width:100%; height:900px; border:none; }
+
+    /* ------------------------------ */
+    /* RESPONSIVE DESIGN */
+    /* ------------------------------ */
+
+    @media (max-width: 1024px) {
+      .two-col { width:90%; }
+      .testi-grid { width:90%; }
+    }
+
+    @media (max-width: 820px) {
+      .two-col {
+        flex-direction:column;
+        text-align:center;
+      }
+      .two-col img,
+      .two-col div {
+        width:100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size:1.8rem; }
+      h2 { font-size:1.6rem; }
+      .cta { font-size:1rem; }
+      section { padding:3rem 0; }
+
+      .testi-grid {
+        flex-direction:column;
+        width:90%;
+        gap:3rem;
+      }
+      .package { width:100%; }
+    }
+
+    @media (max-width: 480px) {
+      body { font-size:15px; }
+      .logo-top { width:120px; }
+
+      .cta {
+        padding:0.9rem 1.8rem;
+        font-size:0.95rem;
+      }
+
+      h1 { font-size:1.6rem; }
+      h2 { font-size:1.4rem; }
+    }
+
   </style>
 </head>
 <body>
 
-<!-- HERO (texto izquierda – imagen derecha) -->
+<!-- HERO -->
 <section style="background:white;">
   <img src="logo.png" class="logo-top" />
 
@@ -127,7 +194,6 @@
   <p>Lo que sienten quienes ya vivieron su Hora Azul.</p>
 
   <div class="testi-grid">
-
     <div>
       <img src="5.jpg" class="testi-img" />
       <h3>La Hora Azul de Natasha</h3>
@@ -142,10 +208,9 @@
 
     <div>
       <img src="7.jpg" class="testi-img" />
-      <h3>La Hora Azul de la familia Paz</h3>
+      <h3>La Hora Azul de la familia Pacchiano</h3>
       <p>“Fue una experiencia muy linda y emotiva”.</p>
     </div>
-
   </div>
 </section>
 
@@ -195,12 +260,11 @@
   <a href="#agenda" class="cta">GUARDA TU HORA AZUL</a>
 </section>
 
-<!-- PREGUNTAS FRECUENTES SIN BORDES GRISES -->
+<!-- FAQ -->
 <section style="background:white; width:85%; margin:auto; padding:4rem 0;">
   <h2>Preguntas frecuentes</h2>
 
   <div class="faq-list">
-
     <p class="faq-item">
       <strong>¿Qué incluye el servicio?</strong><br>
       Fotografías digitales y 1 o más fotografías encuadradas, según el tipo de Hora Azul.
@@ -215,7 +279,6 @@
       <strong>¿Dónde se realiza la Hora Azul?</strong><br>
       En un espacio que sea importante para ti o en el estudio de Hora Azul.
     </p>
-
   </div>
 </section>
 
