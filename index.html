@@ -9,38 +9,17 @@
     section { width:100%; padding:4rem 0; }
     .wide-img { width:100%; border-radius:20px; }
     .center { text-align:center; }
-    .logo-top { width:150px; display:block; margin:2rem auto; }
+    .logo-top { width:120px; display:block; margin:2rem auto; }
     h1,h2,h3 { font-weight:700; }
-    p { line-height:1.7; }
-
-    .cta, .cta-blue {
-      padding:1rem 2.2rem;
-      border-radius:40px;
-      font-weight:bold;
-      text-decoration:none;
-      display:inline-block;
-      margin-top:2rem;
-      border:2px solid #2854AC;
-    }
-    .cta {
-      background:white;
-      color:#2854AC;
-    }
-    .cta-blue {
-      background:#2854AC;
-      color:white;
-    }
-
+    .cta { padding:1rem 2rem; border-radius:40px; background:white; border:2px solid #2854AC; color:#2854AC; font-weight:bold; text-decoration:none; }
+    .cta-blue { padding:1rem 2rem; border-radius:40px; background:white; border:2px solid #2854AC; color:#2854AC; font-weight:bold; text-decoration:none; }
     .two-col { display:flex; gap:3rem; align-items:center; width:85%; margin:auto; }
     .two-col img { width:50%; border-radius:20px; }
     .two-col div { width:50%; }
-
     .testi-grid { display:flex; gap:2rem; width:85%; margin:auto; }
     .testi-grid img { width:100%; border-radius:20px; }
-
     .packages { display:flex; justify-content:center; gap:2rem; width:90%; margin:auto; }
     .package { background:#C7D3DD; padding:2rem; border-radius:30px; width:30%; text-align:center; }
-
     iframe { width:100%; height:900px; border:none; }
   </style>
 </head>
@@ -48,9 +27,9 @@
 
 <!-- HERO -->
 <section style="background:white;">
-  <img src="logo.png" class="logo-top" />
+  <img src="images/logo.png" class="logo-top" />
   <div class="two-col">
-    <img src="1.jpg" class="wide-img" />
+    <img src="images/hero.jpg" class="wide-img" />
     <div>
       <h1>Lo que amas hoy, mañana será memoria. Conecta ahora.</h1>
       <p>Un espacio íntimo para conectar, mirarte desde adentro y guardar lo que realmente importa.</p>
@@ -62,7 +41,7 @@
 <!-- PROBLEMA -->
 <section style="background:white;">
   <div class="two-col">
-    <img src="2.jpg" />
+    <img src="images/problema.jpg" />
     <div>
       <h2>Vivimos tan rápido que a veces olvidamos guardar lo que más amamos.</h2>
     </div>
@@ -75,14 +54,14 @@
     <div>
       <h2>Lo que hoy es momento, mañana será memoria: te ayudo a guardarla para siempre.</h2>
     </div>
-    <img src="3.jpg" />
+    <img src="images/promesa.jpg" />
   </div>
 </section>
 
 <!-- PROCESO -->
 <section style="background:white;">
   <div class="two-col">
-    <img src="4.jpg" />
+    <img src="images/proceso-horizontal.jpg" />
     <div>
       <h2>Hora Azul es un espacio íntimo donde dejarás las preocupaciones en la puerta y conectarás con tu verdad mientras tu esencia se convierte en memoria tangible.</h2>
     </div>
@@ -93,23 +72,20 @@
 <section class="center" style="background:white;">
   <h2>Testimonios</h2>
   <p>Lo que sienten quienes ya vivieron su Hora Azul.</p>
-
   <div class="testi-grid">
     <div>
-      <img src="5.jpg" />
+      <img src="images/testi1.jpg" />
       <h3>La Hora Azul de Natasha, pug de 16 años</h3>
       <p>“Me gusta saber que siempre vamos a poder verla así, feliz y tranquila tomando el sol”.</p>
     </div>
-
     <div>
-      <img src="6.jpg" />
+      <img src="images/testi2.jpg" />
       <h3>La Hora Azul de Ana y Luis</h3>
       <p>“Me encantó que por un momento nos olvidamos de las fotos y solo estábamos siendo nosotros mismos y disfrutando”.</p>
     </div>
-
     <div>
-      <img src="7.jpg" />
-      <h3>La Hora Azul de la familia Pacchiano</h3>
+      <img src="images/testi3-fixed.jpg" />
+      <h3>La Hora Azul de la familia Paz</h3>
       <p>“Nos divertimos mucho, fue una experiencia muy linda y emotiva”.</p>
     </div>
   </div>
@@ -118,7 +94,9 @@
 <!-- BENEFICIOS -->
 <section style="background:white;">
   <div class="two-col" style="align-items:flex-start;">
-    <div><h2>Beneficios</h2></div>
+    <div>
+      <h2>Beneficios</h2>
+    </div>
     <div>
       <ul>
         <li>Guardar el presente antes de que cambie.</li>
@@ -129,11 +107,10 @@
   </div>
 </section>
 
-<!-- ELIGE TU HORA AZUL -->
+<!-- NUEVA SECCIÓN: ELIGE TU HORA AZUL -->
 <section id="elige" class="center" style="background:#F0F4F7;">
   <h2>Elige tu Hora Azul</h2>
   <p>Hora Azul es tu espacio, vívelo a tu manera.</p>
-
   <div class="packages">
     <div class="package">
       <h3>Instante</h3>
@@ -141,48 +118,40 @@
       <p>Sesión de 1 hora + 15 fotos + 1 Impresión encuadrada de 32x32cm</p>
       <strong>$4,700</strong>
     </div>
-
     <div class="package">
       <h3>Conexión</h3>
-      <p><em>Aquí lo efímero se convierte en algo que puedes honrar, colgar, sentir y compartir.</em></p>
+      <p><em>Aquí lo efímero se convierte en algo que puedes honrar, colgar, sentir y compartir. Tu casa de transforma en un hogar con su esencia en la paredes.</em></p>
       <p>Sesión de 1.5 horas + 30 fotos + Set de 4 impresiones encuadradas de 20x20cm</p>
       <strong>$7,300</strong>
     </div>
-
     <div class="package">
       <h3>Huella</h3>
       <p><em>La memoria que deja marca. Un legado que trasciende generaciones, se guarda, se abraza y se hereda.</em></p>
-      <p>Sesión de 2 horas + 60 fotos + Álbum artesanal 28x22cm</p>
+      <p>Sesión de 2 horas + 60 fotos + Álbum artesanal con todos los momentos de su Hora Azul de 28x22cm</p>
       <strong>$12,000</strong>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- PREGUNTAS FRECUENTES -->
 <section style="background:white; width:85%; margin:auto;">
   <h2>Preguntas frecuentes</h2>
-
-  <p><strong>¿Qué incluye el servicio?</strong><br>
-    Fotografías digitales y 1 o más fotografías encuadradas, según el tipo de Hora Azul.</p>
-
-  <p><strong>¿Cuánto tardan en entregar?</strong><br>
-    De 8 a 10 días hábiles.</p>
-
-  <p><strong>¿Dónde se realiza la Hora Azul?</strong><br>
-    En un espacio que sea importante para ti o en el estudio de Hora Azul.</p>
+  <p><strong>¿Qué incluye el servicio?</strong><br>Fotografías digitales y 1 o más fotografías encuadradas, según el tipo de Hora Azul.</p>
+  <p><strong>¿Cuánto tardan en entregar?</strong><br>De 8 a 10 días hábiles.</p>
+  <p><strong>¿Dónde se realiza la Hora Azul?</strong><br>En el espacio de tu elección o en el estudio de Hora Azul.</p>
 </section>
 
-<!-- CTA FINAL -->
+<!-- FINAL CTA -->
 <section style="background:#C7D3DD; text-align:center; padding:6rem 2rem;">
-  <img src="logo.png" style="width:150px; margin:auto; display:block;" />
+  <img src="images/logo-full.png" style="width:150px; margin:auto; display:block;" />
   <h2>Haz tuyo este momento de conexión. Guarda tu Hora Azul hoy.</h2>
   <p>La cámara es la excusa. La memoria es la huella.</p>
   <a href="#agenda" class="cta">QUIERO MI HORA AZUL</a>
 </section>
 
-<!-- CAL.COM -->
+<!-- AGENDA (CAL.COM) -->
 <section id="agenda" style="background:white;">
-  <iframe src="https://cal.com/hora-azul-fotografia/15min"></iframe>
+  <iframe src="images/https://cal.com/hora-azul-fotografia/15min"></iframe>
 </section>
 
 </body>
